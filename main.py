@@ -1,11 +1,8 @@
-from ultralytics import YOLO
+# # Load a COCO-pretrained YOLO11n model and train it on the COCO8 example dataset for 100 epochs
+# yolo train model=yolo11n.pt data=data.yaml epochs=10 imgsz=640
 
-# Load a COCO-pretrained YOLO11n model
-model = YOLO("yolo11n.pt")
+# # Load a COCO-pretrained YOLO11n model and run inference on the 'bus.jpg' image
+# yolo predict model=yolo11n.pt source=image_to_be_predicted.jpg
 
-# Train the model on the COCO8 example dataset for 100 epochs
-results = model.train(data="co", epochs=100, imgsz=640)
-
-# Run inference with the YOLO11n model on the 'bus.jpg' image
-results = model("image.png")
+# use these command to train and predict with YOLOv11n model in cli
 
